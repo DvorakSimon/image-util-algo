@@ -72,7 +72,7 @@ public class RotateImage {
             return image;
         }        
         
-        // Number of inner
+        // Number of squares included main square.
         int pc = getNumOfSquares(image.length);
 
         int offset = 0;
