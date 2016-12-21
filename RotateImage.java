@@ -82,17 +82,6 @@ public class RotateImage {
         return image;
     }
 
-    public void genMultiArr(int from, int to) {
-        System.out.print("{");
-        for (int i = from; i < to + 1; i++) {
-            if (i != to)
-                System.out.print(i + ", ");
-            else
-                System.out.print(i);
-        }
-        System.out.println("}");
-    }
-
     public static void main(String[] args) {
         // Test cases:
         RotateImage rotateImage = new RotateImage();
