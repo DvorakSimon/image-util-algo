@@ -47,6 +47,20 @@ public class RotateImage {
 
         return totalSquares;
     }
+    
+    /**
+     * Check if image is square.
+     * @param obj
+     * @return true -> image is square, false -> image is not square.
+     */
+    public boolean isSquare(int[][] obj) {
+        int x = obj.length;
+        for (int[] ch : obj) {
+            if (x != ch.length)
+                return false;
+        }
+        return true;
+    }    
 
     /**
      * Main function of this program.
@@ -55,6 +69,11 @@ public class RotateImage {
      * @return 90 degrees rotated multidimensional array.
      */
     public int[][] rotateImage(int[][] image) {
+        if (!isSquare(image)) {
+            System.out.println("Image is not squared.");
+            return image;
+        }        
+        
         // Number of inner
         int pc = getNumOfSquares(image.length);
 
