@@ -41,9 +41,8 @@ public class RotateImage {
             // Compute the perimeter of the actual square.
             int o = 4 * k - 4;
 
-            if (o != 0) {
+            if (o != 0)
                 totalSquares++;
-            }
         }
 
         return totalSquares;
