@@ -119,8 +119,6 @@ public class RotateImage {
 
         System.out.println("----------360° -> 0°----------");
         rotateImage.printMultiArray(image);
-
-        //rotateImage.genMultiArr(56, 56+8);
     }
 
 }
