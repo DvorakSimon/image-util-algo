@@ -1,5 +1,3 @@
-package RotateImage;
-
 /**
  * @author Simon Dvorak
  */
