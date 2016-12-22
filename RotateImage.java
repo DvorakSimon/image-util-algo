@@ -97,6 +97,19 @@ public class RotateImage {
         System.out.println();
         return image;
     }
+    
+    public int[][] genMultiArr(int length) {
+        int[][] multiArr = new int[length][length];
+        int iterator = 1;
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
+                multiArr[i][j] = iterator;
+                iterator++;
+            }
+        }
+
+        return multiArr;
+    }
 
     public static void main(String[] args) {
         // Test cases:
@@ -135,6 +148,16 @@ public class RotateImage {
 
         System.out.println("----------360° -> 0°----------");
         rotateImage.printMultiArray(image);
+        
+        /* Second option: */
+        // Generate an array with length 10 * 10.
+        image = rotateImage.genMultiArr(10);
+
+        rotateImage.printMultiArray(image);
+
+        image = rotateImage.rotateImage(image);
+
+        rotateImage.printMultiArray(image);        
     }
 
 }
