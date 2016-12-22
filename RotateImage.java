@@ -149,8 +149,10 @@ public class RotateImage {
         System.out.println("----------360° -> 0°----------");
         rotateImage.printMultiArray(image);
         
+        System.out.println();
+        
         /* Second option: */
-        // Generate an array with length 10 * 10.
+        // Generate an array with length 10 * 10.       
         image = rotateImage.genMultiArr(10);
 
         rotateImage.printMultiArray(image);
