@@ -26,25 +26,6 @@ public class RotateImage {
     private void printCoord(String message, int x, int y) {
         System.out.println(message + " - x: " + x + ", " + "y: " + y);
     }
-
-    /**
-     * Compute how many squares are in the main square included the main square.
-     * @param length - length of the square.
-     * @return number of inner squares.
-     */
-    public int getNumOfSquares(int length) {
-        int totalSquares = 1;
-        // Check if there are at least two more squares.
-        for (int k = length-2; k >= 1; k -= 2) {
-            // Compute the perimeter of the actual square.
-            int o = 4 * k - 4;
-
-            if (o != 0)
-                totalSquares++;
-        }
-
-        return totalSquares;
-    }
     
     /**
      * Check if image is square.
@@ -73,7 +54,7 @@ public class RotateImage {
         }        
         
         // Number of squares included main square.
-        int pc = getNumOfSquares(image.length);
+        int pc = image.length/2;
 
         int offset = 0;
 
